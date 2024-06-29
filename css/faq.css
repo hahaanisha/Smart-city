@@ -1,0 +1,117 @@
+hr {
+    height: 0.5px; /* Adjust the height as needed */
+    background: #ccc;
+    padding: 0;
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto;
+    margin-bottom: 0; /* Center the line */
+}
+
+.faq-img,.faq-title
+{
+    /* height: 300px; */
+    padding: 15px;
+    margin-top: 75px;
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: 500px; */
+}
+.faq-img >img{
+    height: 300px;
+}
+
+
+.Wrapper{
+    max-width: 75%;
+    margin: auto;
+}
+
+.Wrapper > p,
+.Wrapper > h1{
+    margin: 1.5rem 0;
+     text-align: start;
+}
+
+.Wrapper > h1{
+    letter-spacing: 2px;
+}
+
+.accordian{
+background-color: white;
+color: #222;
+cursor: pointer;
+font-size: 1.2rem;
+width: 100%;
+padding: 2rem 2.5rem;
+border: none;
+outline: none;
+transition: 0.4s;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-weight: normal;
+}
+
+.accordian i{
+    font-size: 1.6rem;
+}
+.active,
+.accordian:hover {
+background-color: white;
+}
+
+.panel{
+    display: none;
+    padding: 0 2rem 2.5rem 2rem;
+    background-color: white;
+    overflow: hidden;
+    background-color:#efefef;
+}
+.panel p{
+    color:#222;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+.faq{
+    border: 1px solid rgba(0,0,0,.2);
+    margin: 10px 0;
+}
+
+.faq .active{
+    border: none;
+}
+
+
+.centered-image {
+    display: block;
+    margin: 0 auto; /* Center horizontally */
+    max-width: 25%; /* Ensure image does not exceed container width */
+    padding-top: 20px; /* Adjust as needed for spacing */
+}
+
+@media (max-width: 768px) {
+    .centered-image {
+        padding-top: 10px; /* Adjust spacing for smaller screens */
+    }
+}
+
+
+  /*-----------------------------------*\
+    #MEDIA QUERIES
+  \*-----------------------------------*/
+  /**
+   * responsive for lesser than 575px screen
+   */
+   @media (max-width: 575px) {
+    
+    .faq-img >img{
+        height: 200px;
+    }
+    .faq-title{
+        text-align: center;
+        font-size: 20px;
+    }
+    
+
+   }
