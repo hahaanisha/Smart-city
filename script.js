@@ -41,3 +41,27 @@ const activeElem = function () {
 }
 
 addEventOnElem(window, "scroll", activeElem);
+
+
+
+// bot------------
+
+  window.botpressWebChat.init({
+      "composerPlaceholder": "Chat with MumbaEase",
+      "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
+      "botId": "a1941fc8-f0fa-48c5-85ea-0bf45ace4c23",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "a1941fc8-f0fa-48c5-85ea-0bf45ace4c23",
+      "webhookId": "5083c201-f353-4142-be43-9040d743a081",
+      "lazySocket": true,
+      "themeName": "prism",
+      "botName": "MumbaEase",
+      "avatarUrl": "https://static.vecteezy.com/system/resources/previews/012/941/847/original/illustration-of-avatar-girl-nice-smiling-woman-with-black-hair-flat-icon-on-purple-background-vector.jpg",
+      "frontendVersion": "v1",
+      "useSessionStorage": true,
+      "enableConversationDeletion": true,
+      "theme": "prism",
+      "themeColor": "#2563eb",
+      "allowedOrigins": []
+  });

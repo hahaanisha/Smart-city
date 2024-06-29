@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MumbaEase - Home</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/contact.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -18,7 +18,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="/index.html">
                     <img src="/Assets/logo.png" width="162" height="50" alt="MumbaEase logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -28,7 +28,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="/index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/html/about.html">About</a>
@@ -58,33 +58,72 @@
     </div>
 </header>
 
-<!-- hero section------------------------------------------- -->
-<div id="intro-example" class="p-5 text-center bg-image"
-     style="background-image: url('https://t4.ftcdn.net/jpg/04/37/33/75/360_F_437337508_qQlBLKCnTXrJno53R99naHsv8cUBtFvZ.jpg');">
-  <div class="mask">
-    <div class="d-flex justify-content-center align-items-center h-100">
-      <div class="text-white">
-        <h1 class="outlined-text mb-3" style="font-size: 8.5vw; font-weight: 900; font-family: 'Archivo Black', sans-serif; line-height: 8.5vw; color: rgb(192, 192, 192);">
-          MumbaEase
-        </h1>
-        <h5 class="mb-4">
-          Empowering citizens with seamless access to city services, issue reporting, and real-time civic data.
-        </h5>
-        <a data-mdb-ripple-init class="btn btn-outline-dark btn-lg m-2"
-        href="#"
-        role="button" rel="nofollow" target="_blank">Contact us</a>
-     <a data-mdb-ripple-init class="btn btn-outline-dark btn-lg m-2"
-        href="#"
-        target="_blank" role="button">Services</a>
-      </div>
+<!-- MAIN BODY------------------------------------ -->
+<div class="contact-info">
+    <div class="contact-title"><center>Contact Us</center></div>
+    <div class="contact-subtitle">
+        <h6>We'd love to hear from you!</h6>
+        <p>Whether you have a question, feedback, or just want to say hello, feel free to reach out.</p>
     </div>
-  </div>
 </div>
 
-
-
-
-
+<div class="contact-container">
+    <img src="/Assets/contact.svg" alt="">
+    <form>
+        <!-- 2 column grid layout with text inputs for the first and last names -->
+        <div class="row mb-4">
+          <div class="col">
+            <div data-mdb-input-init class="form-outline">
+              <input type="text" id="form6Example1" class="form-control" />
+              <label class="form-label" for="form6Example1">First name</label>
+            </div>
+          </div>
+          <div class="col">
+            <div data-mdb-input-init class="form-outline">
+              <input type="text" id="form6Example2" class="form-control" />
+              <label class="form-label" for="form6Example2">Last name</label>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Text input -->
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input type="text" id="form6Example3" class="form-control" />
+          <label class="form-label" for="form6Example3">Company name</label>
+        </div>
+      <!-- Number input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="number" id="form6Example6" class="form-control" />
+        <label class="form-label" for="form6Example6">Phone</label>
+      </div>
+      <!-- Email input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="email" id="form6Example5" class="form-control" />
+        <label class="form-label" for="form6Example5">Email</label>
+      </div>
+        <!-- Text input -->
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input type="text" id="form6Example4" class="form-control" />
+          <label class="form-label" for="form6Example4">Subject</label>
+        </div>
+      
+        
+      
+        
+      
+        <!-- Message input -->
+        <div data-mdb-input-init class="form-outline mb-4">
+          <textarea class="form-control" id="form6Example7" rows="4"></textarea>
+          <label class="form-label" for="form6Example7">Additional information</label>
+        </div>
+      
+      
+        <!-- Submit button -->
+        <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4" style=" background-color: #333;border: #1e1e1e;">Place order</button>
+      </form>
+    
+</div>
+<!-- ------------------Form body------------ -->
 
  <!-- FOOTER---------------------------------- -->
 <footer class="text-center text-lg-start bg-body-tertiary text-muted">
@@ -98,7 +137,7 @@
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
           <a href="index.html" class="logo">
-            <img src="Assets/logo.png" width="162" height="50" alt="EduWeb logo">
+            <img src="/Assets/logo.png" width="162" height="50" alt="MumbaEase">
           </a>
           <p>
             Empowering citizens with seamless access to city services, issue reporting, and providing real-time insights into urban operations, enhancing civic engagement and efficiency.
@@ -137,7 +176,7 @@
             <a href="/html/faq.html" class="text-reset">FAQ</a>
           </p>
           <p>
-            <a href="/html/contact.html" class="text-reset">Contact Us</a>
+            <a href="/html/contact.html" class="text-reset">Contact</a>
           </p>
           
         </div>
@@ -169,11 +208,8 @@
   </div>
   <!-- Copyright -->
 </footer>
-<!-- Footer -->
 
 <!-- MDB Bootstrap Bundle with JavaScript (Ensure it's included in your HTML) -->
 <script src="https://cdn.jsdelivr.net/npm/mdb-ui-kit/dist/js/mdb.min.js"></script>
-<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-<script src="https://mediafiles.botpress.cloud/a1941fc8-f0fa-48c5-85ea-0bf45ace4c23/webchat/config.js" defer></script>
 </body>
 </html>
