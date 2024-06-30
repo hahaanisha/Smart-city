@@ -1,6 +1,24 @@
 /**
- * navbar toggle
+ * Navbar toggle
  */
+
+// Function to add event listeners
+const addEventOnElem = (elems, eventType, callback) => {
+  if (elems === window) {
+    console.log(`Adding ${eventType} event listener to window`);
+    window.addEventListener(eventType, callback);
+  } else if (NodeList.prototype.isPrototypeOf(elems) || HTMLCollection.prototype.isPrototypeOf(elems)) {
+    elems.forEach(elem => {
+      console.log(`Adding ${eventType} event listener to`, elem);
+      elem.addEventListener(eventType, callback);
+    });
+  } else if (elems instanceof Element) {
+    console.log(`Adding ${eventType} event listener to`, elems);
+    elems.addEventListener(eventType, callback);
+  } else {
+    console.error('Invalid element(s) provided:', elems);
+  }
+};
 
 const navbar = document.querySelector("[data-navbar]");
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
@@ -8,23 +26,23 @@ const navLinks = document.querySelectorAll("[data-nav-link]");
 const overlay = document.querySelector("[data-overlay]");
 
 const toggleNavbar = function () {
+  console.log('Toggling navbar');
   navbar.classList.toggle("active");
   overlay.classList.toggle("active");
-}
+};
 
 addEventOnElem(navTogglers, "click", toggleNavbar);
 
 const closeNavbar = function () {
+  console.log('Closing navbar');
   navbar.classList.remove("active");
   overlay.classList.remove("active");
-}
+};
 
 addEventOnElem(navLinks, "click", closeNavbar);
 
-
-
 /**
- * header active when scroll down to 100px
+ * Header active when scroll down to 100px
  */
 
 const header = document.querySelector("[data-header]");
@@ -38,30 +56,27 @@ const activeElem = function () {
     header.classList.remove("active");
     backTopBtn.classList.remove("active");
   }
-}
+};
 
 addEventOnElem(window, "scroll", activeElem);
 
-
-
-// bot------------
-
-  window.botpressWebChat.init({
-      "composerPlaceholder": "Chat with MumbaEase",
-      "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
-      "botId": "a1941fc8-f0fa-48c5-85ea-0bf45ace4c23",
-      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
-      "messagingUrl": "https://messaging.botpress.cloud",
-      "clientId": "a1941fc8-f0fa-48c5-85ea-0bf45ace4c23",
-      "webhookId": "5083c201-f353-4142-be43-9040d743a081",
-      "lazySocket": true,
-      "themeName": "prism",
-      "botName": "MumbaEase",
-      "avatarUrl": "https://static.vecteezy.com/system/resources/previews/012/941/847/original/illustration-of-avatar-girl-nice-smiling-woman-with-black-hair-flat-icon-on-purple-background-vector.jpg",
-      "frontendVersion": "v1",
-      "useSessionStorage": true,
-      "enableConversationDeletion": true,
-      "theme": "prism",
-      "themeColor": "#2563eb",
-      "allowedOrigins": []
-  });
+// Bot configuration
+window.botpressWebChat.init({
+  "composerPlaceholder": "Chat with MumbaEase",
+  "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
+  "botId": "a1941fc8-f0fa-48c5-85ea-0bf45ace4c23",
+  "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+  "messagingUrl": "https://messaging.botpress.cloud",
+  "clientId": "a1941fc8-f0fa-48c5-85ea-0bf45ace4c23",
+  "webhookId": "5083c201-f353-4142-be43-9040d743a081",
+  "lazySocket": true,
+  "themeName": "prism",
+  "botName": "MumbaEase",
+  "avatarUrl": "https://static.vecteezy.com/system/resources/previews/012/941/847/original/illustration-of-avatar-girl-nice-smiling-woman-with-black-hair-flat-icon-on-purple-background-vector.jpg",
+  "frontendVersion": "v1",
+  "useSessionStorage": true,
+  "enableConversationDeletion": true,
+  "theme": "prism",
+  "themeColor": "#2563eb",
+  "allowedOrigins": []
+});
