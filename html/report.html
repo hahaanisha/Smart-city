@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report and issue</title>
+  <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="/css/header.css">
+   <link rel="stylesheet" href="/css/footer.css">
+  <link
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <style>
+    body {
+     
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8f9fa;
+    }
+    .form-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+    .form-outline {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+    .form-outline input,
+    .form-outline textarea,
+    .form-outline select {
+      padding: 1rem 0.75rem 0.25rem 0.75rem;
+    }
+    .form-outline label {
+      position: absolute;
+      top: 1rem;
+      left: 0.75rem;
+      font-size: 0.875rem;
+      color: #6c757d;
+      transition: 0.2s ease-in-out;
+      pointer-events: none;
+    }
+    .form-outline input:focus + label,
+    .form-outline input:not(:placeholder-shown) + label,
+    .form-outline textarea:focus + label,
+    .form-outline textarea:not(:placeholder-shown) + label,
+    .form-outline select:focus + label,
+    .form-outline select:not(:placeholder-shown) + label {
+      top: -0.5rem;
+      left: 0.75rem;
+      font-size: 0.75rem;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+<!-- header--------------------------------------- -->
+<header class="header" data-header>
+  <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+              <a class="navbar-brand" href="/index.html">
+                  <img src="/Assets/logo.png" width="162" height="50" alt="MumbaEase logo">
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                  <ul class="navbar-nav">
+                      <li class="nav-item">
+                          <a class="nav-link" href="/index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/html/about.html">About</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/html/services.html">Services</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/html/track.html">Track</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/html/report.html">Report</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/html/contact.html">Contact</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/html/faq.html">FAQs</a>
+                      </li>
+                      
+                  </ul>
+              </div>
+          </div>
+      </nav>
+  </div>
+</header>
+<main style="display: flex;justify-content: center;align-items: ;">
+  <div class="form-container">
+    <form>
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="text" id="name" class="form-control" placeholder=" " />
+        <label class="form-label" for="name">Name</label>
+      </div>
+
+      <!-- Toggle for Stay Anonymous -->
+      <div class="form-check form-switch mb-4">
+        <input class="form-check-input" type="checkbox" id="stayAnonymous" />
+        <label class="form-check-label" for="stayAnonymous">Stay Anonymous</label>
+      </div>
+
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="text" id="area" class="form-control" placeholder=" " />
+        <label class="form-label" for="area">Area</label>
+      </div>
+
+      <!-- Date input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="date" id="date" class="form-control" placeholder=" " />
+        <label class="form-label" for="date">Date</label>
+      </div>
+
+      <!-- Time input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="time" id="time" class="form-control" placeholder=" " />
+        <label class="form-label" for="time">Time</label>
+      </div>
+
+      <!-- Dropdown for Urgency -->
+      <div class="form-outline mb-4">
+        <select id="urgency" class="form-control" placeholder=" ">
+          <option value="" disabled selected></option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <label class="form-label" for="urgency">Urgency</label>
+      </div>
+
+      <!-- Message input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <textarea class="form-control" id="message" rows="4" placeholder=" "></textarea>
+        <label class="form-label" for="message">Message</label>
+      </div>
+
+      <!-- Submit button -->
+      <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block mb-4">Submit</button>
+    </form>
+  </div>
+</main>
+  
+  <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <a href="index.html" class="logo">
+              <img src="/Assets/logo.png" width="162" height="50" alt="MumbaEase">
+            </a>
+            <p>
+              Empowering citizens with seamless access to city services, issue reporting, and providing real-time insights into urban operations, enhancing civic engagement and efficiency.
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="/html/about.html" class="text-reset">About</a>
+            </p>
+            <p>
+              <a href="/html/services.html" class="text-reset">Services</a>
+            </p>
+            <p>
+              <a href="/html/track.html" class="text-reset">Track</a>
+            </p>
+            <p>
+              <a href="/html/report.html" class="text-reset">Report</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="/html/faq.html" class="text-reset">FAQ</a>
+            </p>
+            <p>
+              <a href="/html/contact.html" class="text-reset">Contact</a>
+            </p>
+            
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3"></i> Chembur,Mumbai-400074.</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              teaminspire@gmail.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2024 Copyright:
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Team Inspire
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+  
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
